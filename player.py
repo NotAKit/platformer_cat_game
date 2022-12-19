@@ -1,5 +1,6 @@
 import pygame
 
+
 class Player(pygame.sprite.Sprite):
     def __init__(self,pos):
         super().__init__()
@@ -26,7 +27,7 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_SPACE]:
             self.jump()
 
-    def apple_gravity(self):
+    def apply_gravity(self):
         self.direction.y += self.gravity
         self.rect.y += self.direction.y
 
@@ -36,5 +37,3 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.get_input()
-        self.rect.x += self.direction.x * self.speed
-        self.apple_gravity()
