@@ -15,7 +15,7 @@ while True:
             pygame.quit()
             sys.exit()
 
-    screen.fill('red')
+    screen.fill('white')
     level.run()
 
     pygame.display.update()
