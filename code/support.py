@@ -1,5 +1,5 @@
 from os import walk
-
+import time
 import pygame
 
 
@@ -14,6 +14,5 @@ def import_folder(path):
             else:
                 image_surf = pygame.image.load(full_path).convert_alpha()
                 surface_list.append(image_surf)
-    print(surface_list)
+    # print(surface_list)
     return surface_list
-
